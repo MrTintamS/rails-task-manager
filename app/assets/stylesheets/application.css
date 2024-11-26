@@ -1,3 +1,81 @@
+/* Général */
+body {
+  background-color: #f8f9fa; /* Couleur de fond légère */
+  font-family: Arial, sans-serif;
+}
+/* Titres principaux */
+h1 {
+  font-size: 2.5rem;
+  color: #343a40; /* Couleur sombre */
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Liens */
+a {
+  text-decoration: none;
+  color: #0d6efd;
+}
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+/* Liste des tâches */
+ul.list-group li {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+ul.list-group li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+/* Badges */
+.badge {
+  font-size: 0.9rem;
+  padding: 0.4em 0.6em;
+  border-radius: 0.4rem;
+}
+/* Boutons */
+.btn {
+  transition: background-color 0.2s, color 0.2s;
+}
+.btn-primary:hover {
+  background-color: #004085;
+  color: #fff;
+}
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+/* Formulaires */
+form .form-control {
+  border-radius: 0.3rem;
+}
+form .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 4px rgba(13, 110, 253, 0.25);
+}
+/* Cartes (pages show) */
+.card {
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+.card .card-title {
+  font-size: 1.25rem;
+  color: #495057;
+}
+/* Marges générales */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Pied de page (optionnel si vous en avez un) */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #343a40;
+  color: #fff;
+  margin-top: 30px;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

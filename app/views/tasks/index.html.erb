@@ -1,0 +1,26 @@
+<div class="container my-5">
+  <h1 class="mb-4">Liste des tâches</h1>
+  <ul class="list-group">
+    <% @tasks.each do |task| %>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <strong><%= link_to task.title, task_path(task), class: "text-decoration-none" %></strong>
+          <p class="mb-1"><%= task.details %></p>
+        </div>
+        <div>
+          <!-- Icône de case cochée/non cochée selon l'état de la tâche -->
+          <% if task.completed %>
+            <i class="fas fa-check-circle text-success"></i>
+          <% else %>
+            <i class="far fa-circle text-secondary"></i>
+          <% end %>
+          <!-- Lien Modifier -->
+          <%= link_to 'Modifier', edit_task_path(task), class: "btn btn-sm btn-outline-primary mx-2" %>
+          <!-- Lien Supprimer -->
+          <%= link_to 'Supprimer', delete_task_path(task), method: :delete, data: { confirm: 'Êtes-vous sûr ?' }, class: "btn btn-sm btn-outline-danger" %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to 'Ajouter une nouvelle tâche', new_task_path, class: "btn btn-primary mt-4" %>
+</div>

@@ -1,0 +1,17 @@
+<div class="container my-5">
+  <h1 class="mb-4"><%= @task.title %></h1>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Détails</h5>
+      <p class="card-text"><%= @task.details %></p>
+      <p class="card-text">
+        <strong>Statut : </strong>
+        <%= @task.completed ? '<span class="badge bg-success">Terminée</span>'.html_safe : '<span class="badge bg-warning">Non terminée</span>'.html_safe %>
+      </p>
+    </div>
+  </div>
+  <div class="mt-4">
+    <%= link_to 'Retour', tasks_path, class: "btn btn-outline-secondary" %>
+    <%= link_to 'Modifier', edit_task_path(@task), class: "btn btn-primary" %>
+  </div>
+</div>
